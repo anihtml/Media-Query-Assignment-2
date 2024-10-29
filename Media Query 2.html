@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Media Query Dev intro</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(  40, 37, 65);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Spectral", serif;
+            font-style: normal;
+        }
+        header{
+            display: flex;
+            justify-content: end;
+            width: 90%;
+            margin: 20px;
+            gap: 5px;
+        }
+        header button{
+            background-color: rgb(  40, 37, 65);
+            color: white;
+            border: solid 1px rgb(  40, 37, 65);
+            padding: 4px 10px;
+            font-weight: 200;
+            cursor: pointer;
+        }
+
+        header button:hover{
+            background-color: skyblue;
+            color: white;
+            border: solid 1px skyblue;
+            border-radius: 50px;
+        }
+
+    .hamburgermenu img{
+        display: hidden;
+        height: 30px;
+        width: 30px;
+    }
+        .introleft{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .introline1{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5em;
+            color: white;
+        }
+        .introline2{
+            font-size: 1.5em;
+            color: burlywood;
+        }
+
+        .introline1 img{
+            height: 40px;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .introdiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .introdiv p{
+            font-size: 2.5em;
+            font-weight: 900;
+            color: white;
+        }
+
+        .introright img{
+            height: 350px;
+            width: 350px;
+        }
+
+        .projectimg{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .projectimg h1{
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer h1{
+            color: white;
+            margin-top: 20px;
+        }
+
+        .horizontal-divider{
+            height: 5px;
+            width: 110px;
+            background-color: blue;
+            margin-top: 5px;
+        }
+
+        .projectimages{
+            display: grid;
+            flex-wrap: wrap;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+
+        .projectimages p{
+            text-align: center;
+            color: white;
+        }
+
+        .projectimages img{
+            height: 250px;
+            width: 250px;
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer ul li img{
+            height: 30px;
+            width: 30px;
+        }
+    
+        footer ul{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+
+        }
+
+        footer ul li{
+            list-style: none;
+        }
+
+        .horizontal-divider2{
+            height: 5px;
+            width: 178px;
+            background-color: blue;
+        }
+        @media (min-width: 425px){
+            .hamburgermenu img{ display: none;}
+        }
+        @media (min-width: 1px)and (max-width:425px){
+            body{
+            background-color: rgb(  40, 37, 65);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Spectral", serif;
+            font-style: normal;
+            }
+            header{
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 20px;
+            gap: 5px;
+        }
+
+        .hamburgermenu{
+            display: flex;
+            justify-content: start;
+            width: 100%;
+        }
+        .menu{
+         display: none
+        }
+        .hamburgermenu img{
+        display: hidden;
+        height: 30px;
+        width: 30px;
+    }
+            .introdiv{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .projectimg{
+                display: flex;
+                flex-direction: column;
+            }
+            .projectimages{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- Menu -->
+    <div class="hamburgermenu"><img src="./Assets/hambrger.png" alt="" srcset=""></div>
+
+     <div class="menu">
+        <button>Home</button>
+        <button>Projects</button>
+        <button>Technologies</button>
+        <button>Contact</button>
+    </div>
+</header>
+<section>
+    <nav>
+    <!-- Intro Content Left-->
+     <div class="introdiv">
+    <div class="introleft">
+        <div class="introline1">
+            <img src="./Assets/waving-hand.png" alt="waving-hand" srcset="">
+            <h3>Hi Everyone I'm</h3>
+        </div>
+        <p>Aniket Khairnar</p>
+        <div class="introline2">
+            <h3>Fontend Developer</h3>
+        </div>
+    </div>
+    <!-- Intro Content Right -->
+    <div class="introright"><img src="./Assets/pc-image.png" alt="pc-image" srcset=""></div>
+</div>
+    </nav>
+</section>
+<main>
+    <!-- Project heading -->
+     <div class="projectimg">
+    <div class="projecth1">
+        <h1>Projects</h1>
+        <div class="horizontal-divider"></div>
+    </div>
+    <!-- Project Images -->
+    <div class="projectimages">
+        <div>
+            <img src="./Assets/image.png" alt="image1" srcset="">
+            <p>Project 1</p>
+        </div>
+        <div>
+            <img src="./Assets/image.png" alt="image2" srcset="">
+            <p>Project 2</p>
+        </div>
+        <div>
+            <img src="./Assets/image.png" alt="image3" srcset="">
+            <p>Project 3</p>
+        </div>
+        <div>
+            <img src="./Assets/image.png" alt="image4" srcset="">
+            <p>Project 4</p>
+        </div>
+        </ul>
+    </div>
+    </div>
+</main>
+<footer>
+    <!-- Page footer -->
+    <div class="contactme">
+        <h1>Contact Me</h1>
+        <div class="horizontal-divider2"></div>
+    </div>
+    <div class="contactimags">
+        <ul>
+            <li><img src="./Assets/github.png" alt=""></li>
+            <li><img src="./Assets/linkedin.png" alt=""></li>
+            <li><img src="./Assets/outlook.png" alt=""></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
